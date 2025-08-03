@@ -1,0 +1,38 @@
+.card {
+  display: flex;
+  background-color: white;
+  padding: 1rem;
+  border-bottom: 1px solid #eaeaea;
+  cursor: pointer;
+}
+
+.image {
+  width: 196px;
+  height: 196px;
+  max-height: 196px;
+  max-width: 196px;
+  object-fit: contain;
+  margin-right: 16px;
+  display: block;
+  background: #fff;
+
+  img {
+    border-radius: inherit;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.title {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 12px 0 4px;
+}

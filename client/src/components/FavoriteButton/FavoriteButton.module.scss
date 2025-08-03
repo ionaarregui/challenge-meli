@@ -1,0 +1,24 @@
+.favoriteButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.heartIcon {
+  transition: all 0.2s ease;
+
+  &.active {
+    transform: scale(1.1);
+  }
+} 
