@@ -1,0 +1,301 @@
+{
+  "details": [
+  {
+    "author": {
+      "userName": "JuanMercadolibre",
+      "name": "Juan",
+      "lastname": "Pérez",
+      "sold_quantity": "500"
+    },
+    "item": {
+      "id": "MLA1",
+      "title": "Xiaomi POCO Poco X6 Pro 5G Dual SIM 512 GB negro 12 GB RAM",
+      "price": {
+        "currency": "ARS",
+        "amount": 800000,
+        "decimals": 0,
+        "withoutTax": 740000
+      },     
+      "mainPicture": "https://http2.mlstatic.com/D_NQ_NP_2X_660762-MLA74048129932_012024-F.webp",
+      "categories": ["Tecnologia", "Celulares", "Smartphones"],
+      "variants": [{
+        "variant_type": "color",
+        "variant":[{
+          "variant_value":"Negro",
+          "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_660762-MLA74048129932_012024-F.webp"
+        },
+        {
+          "variant_value":"Amarillo",
+          "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_926322-MLA74054728731_012024-F.webp"
+        }        
+      ]
+      }],
+      "stock": 5,
+      "condition": "Nuevo",
+      "free_shipping": "Llega gratis mañana",
+      "retiro": "Retirá gratis entre el lunes y martes",
+      "sold_quantity": "+350",
+      "rating": {
+        "score": 4.6,
+        "count": 87
+      },
+      "bestPrice": true,
+      "description": "El POCO X6 Pro ofrece un rendimiento increíble con su procesador de alto rendimiento y 12 GB de RAM, ideal para juegos y multitarea exigente." 
+  }},
+  {
+    "author": {
+      "userName": "JuanMercadolibre",
+      "name": "Juan",
+      "lastname": "Pérez",
+      "sold_quantity": "270"
+    },
+    "item": {
+      "id": "MLA2",
+      "title": "Xiaomi Poco X7 Pro Dual SIM 5G 512gb Negro 12ram 50mpx",
+      "price": {
+        "currency": "ARS",
+        "amount": 850000,
+        "decimals": 0,
+        "withoutTax": 785000
+      },
+      "mainPicture": "https://http2.mlstatic.com/D_NQ_NP_2X_834839-MLA50292961429_062022-V.webp",
+      "categories": ["Tecnologia", "Celulares", "Smartphones"],
+      "variants": [{
+        "variant_type": "color",
+        "variant":[{
+          "variant_value":"Negro",
+          "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_834839-MLA50292961429_062022-V.webp"
+        }          
+      ]
+      }],
+      "stock": 2,
+      "condition": "Nuevo",
+      "free_shipping": "Llega gratis mañana",
+      "retiro": "Retirá gratis entre el martes y miércoles",
+      "sold_quantity": "+270",
+      "rating": {
+        "score": 4.7,
+        "count": 65
+      },
+      "bestPrice": false,
+      "description": "Este smartphone de gama alta incluye una cámara de 50 MP, conectividad 5G y una memoria enorme para almacenar todo lo que necesitas."
+    }
+  },
+  {
+    "author": {
+      "userName": "JuanMercadolibre",
+      "name": "Juan",
+      "lastname": "Pérez",
+      "sold_quantity": "420"
+    },
+    "item": {
+      "id": "MLA3",
+      "title": "Samsung Galaxy A36 5G 256gb 8gb Awesome Black",
+      "price": {
+        "currency": "ARS",
+        "amount": 699000,
+        "decimals": 0,
+        "withoutTax": 645000
+      },
+      "mainPicture": "https://http2.mlstatic.com/D_NQ_NP_2X_834839-MLA50292961429_062022-V.webp",
+      "categories": ["Tecnologia", "Celulares", "Smartphones"],
+      "variants": [{
+        "variant_type": "color",
+        "variant":[{
+          "variant_value":"Awesome Black",
+          "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_834839-MLA50292961429_062022-V.webp"
+        },
+        {
+          "variant_value":"Blanco",
+          "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_926322-MLA74054728731_012024-F.webp"
+        }        
+      ]
+      }],
+      "stock": 6,
+      "condition": "Nuevo",
+      "free_shipping": "Llega gratis entre el Jueves y el Viernes 7",
+      "retiro": "Retirá gratis entre el miércoles y jueves",
+      "sold_quantity": "+420",
+      "rating": {
+        "score": 4.4,
+        "count": 140
+      },
+      "bestPrice": false,
+      "description": "Samsung A36 con diseño moderno, potente batería y 5G para que estés conectado siempre a máxima velocidad."
+    }
+  },
+  {
+    "author": {
+      "userName": "JuanMercadolibre",
+      "name": "Juan",
+      "lastname": "Pérez",
+      "sold_quantity": "180"
+    },
+    "item": {
+      "id": "MLA4",
+      "title": "Motorola Edge 50 Fusion 256gb 8gb RAM Negro",
+      "price": {
+        "currency": "ARS",
+        "amount": 629000,
+        "decimals": 0,
+        "withoutTax": 580000
+      },
+      "mainPicture": "https://http2.mlstatic.com/D_NQ_NP_2X_834839-MLA50292961429_062022-V.webp",
+      "categories": ["Tecnologia", "Celulares", "Smartphones"],
+      "variants": [{
+        "variant_type": "color",
+        "variant":[{
+          "variant_value":"Negro",
+          "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_834839-MLA50292961429_062022-V.webp"
+        },
+        {
+          "variant_value":"Verde",
+          "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_926322-MLA74054728731_012024-F.webp"
+        }        
+      ]
+      }],
+      "stock": 4,
+      "condition": "Nuevo",
+      "free_shipping": "Llega gratis mañana",
+      "retiro": "Retirá gratis entre el viernes y sábado",
+      "sold_quantity": "+180",
+      "rating": {
+        "score": 4.3,
+        "count": 73
+      },
+      "bestPrice": false,
+      "description": "El Motorola Edge 50 Fusion combina diseño elegante con Tecnologia de cámara avanzada para capturar tus mejores momentos."
+    }
+  },
+  {
+    "author": {
+      "userName": "JuanMercadolibre",
+      "name": "Juan",
+      "lastname": "Pérez",
+      "sold_quantity": "890"
+    },
+    "item": {
+      "id": "MLA5",
+      "title": "iPhone 13 128GB Midnight",
+      "price": {
+        "currency": "ARS",
+        "amount": 999999,
+        "decimals": 0,
+        "withoutTax": 925000
+      },
+      "mainPicture": "https://http2.mlstatic.com/D_NQ_NP_2X_834839-MLA50292961429_062022-V.webp",
+      "categories": ["Tecnologia", "Celulares", "Smartphones"],
+      "variants": [{
+        "variant_type": "color",
+        "variant":[{
+          "variant_value":"Midnight",
+          "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_834839-MLA50292961429_062022-V.webp"
+        },
+        {
+          "variant_value":"Azul",
+          "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_926322-MLA74054728731_012024-F.webp"
+        }        
+      ]
+      }],
+      "stock": 1,
+      "condition": "Nuevo",
+      "free_shipping": "Llega gratis entre el Jueves y el Viernes 7",
+      "retiro": "Retirá gratis entre el lunes y martes",
+      "sold_quantity": "+890",
+      "rating": {
+        "score": 4.8,
+        "count": 320
+      },
+      "bestPrice": false,
+      "description": "El iPhone 13 con chip A15 Bionic ofrece un rendimiento fluido, excelente cámara y un diseño refinado con iOS como sistema operativo."
+    }
+  },
+  {
+    "author": {
+      "userName": "JuanMercadolibre",
+      "name": "Juan",
+      "lastname": "Pérez",
+      "sold_quantity": "110"
+    },
+    "item": {
+      "id": "MLA6",
+      "title": "Campera inflable impermeable unisex azul",
+      "price": {
+        "currency": "ARS",
+        "amount": 159999,
+        "decimals": 0,
+        "withoutTax": 148000
+      },
+      "mainPicture": "https://http2.mlstatic.com/D_NQ_NP_2X_834839-MLA50292961429_062022-V.webp",
+      "categories": ["Ropa y accesorios", "Abrigo", "Campera"],
+      "variants": [{
+        "variant_type": "color",
+        "variant":[{
+          "variant_value":"Azul",
+          "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_834839-MLA50292961429_062022-V.webp"
+        },
+        {
+          "variant_value":"Negro",
+          "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_926322-MLA74054728731_012024-F.webp"
+        }        
+      ]
+      }],
+      "stock": 10,
+      "condition": "Nuevo",
+      "free_shipping": "Llega gratis mañana",
+      "retiro": "Retirá gratis entre el martes y miércoles",
+      "sold_quantity": "+110",
+      "rating": {
+        "score": 4.2,
+        "count": 47
+      },
+      "bestPrice": false,
+      "description": "Campera inflable ideal para invierno, resistente al agua y de gran comodidad para uso diario en climas fríos."
+    }
+  },
+  {
+    "author": {
+      "userName": "JuanMercadolibre",
+      "name": "Juan",
+      "lastname": "Pérez",
+      "sold_quantity": "95"
+    },
+    "item": {
+      "id": "MLA7",
+      "title": "Campera de cuero sintético negra para hombre",
+      "price": {
+        "currency": "ARS",
+        "amount": 199999,
+        "decimals": 0,
+        "withoutTax": 185000
+      },
+      "mainPicture": "https://http2.mlstatic.com/D_NQ_NP_2X_834839-MLA50292961429_062022-V.webp",
+      "categories": ["Ropa y accesorios", "Abrigo", "Campera"],
+      "variants": [{
+        "variant_type": "color",
+        "variant":[{
+          "variant_value":"Negro",
+          "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_834839-MLA50292961429_062022-V.webp"
+        },
+        {
+          "variant_value":"Marrón",
+          "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_926322-MLA74054728731_012024-F.webp"
+        }        
+      ]
+      }],
+      "stock": 7,
+      "condition": "Nuevo",
+      "free_shipping": "Llega gratis entre el Jueves y el Viernes 7",
+      "retiro": "Retirá gratis entre el lunes y martes",
+      "sold_quantity": "+95",
+      "rating": {
+        "score": 4.1,
+        "count": 30
+      },
+      "bestPrice": false,
+      "description": "Campera de cuero sintético con diseño clásico y moderno. Ideal para salidas y ocasiones especiales."
+    }
+  }
+]
+
+}
