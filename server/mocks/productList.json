@@ -28,7 +28,7 @@
       },
       "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_662793-MLA81920022500_012025-T.webp",
       "condition": "new",
-      "free_shipping": "Llega gratis mañana",
+      "free_shipping": null,
       "categories": ["Tecnologia", "Celulares", "Smartphones"]
     },
     {
@@ -41,7 +41,7 @@
       },
       "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_768584-MLA83308468613_032025-T.webp",
       "condition": "new",
-      "free_shipping": "Llega gratis el Lunes",
+      "free_shipping": "Llega gratis el jueves",
       "categories": ["Tecnologia", "Celulares", "Smartphones"]
     },
     {

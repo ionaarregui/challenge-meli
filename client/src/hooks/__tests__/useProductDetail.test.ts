@@ -1,28 +1,28 @@
 import { renderHook, waitFor } from '@testing-library/react'
 import { useBreadcrumb } from '../../contexts/BreadcrumContext'
 import { useProductsDetails } from '../useProductDetail'
-import { buildApiUrl } from '../../common/config'
+import { productService } from '../../services/productService'
 
 // Mock del contexto BreadcrumbContext
 jest.mock('../../contexts/BreadcrumContext', () => ({
   useBreadcrumb: jest.fn(),
 }))
 
-// Mock de la función buildApiUrl
-jest.mock('../../common/config', () => ({
-  buildApiUrl: jest.fn(),
+// Mock del servicio de productos
+jest.mock('../../services/productService', () => ({
+  productService: {
+    getProductDetail: jest.fn(),
+  },
 }))
-
-// Mock de fetch global
-global.fetch = jest.fn()
 
 describe('useProductsDetails', () => {
   const mockSetBreadcrumb = jest.fn()
   const mockUseBreadcrumb = useBreadcrumb as jest.MockedFunction<
     typeof useBreadcrumb
   >
-  const mockBuildApiUrl = buildApiUrl as jest.MockedFunction<typeof buildApiUrl>
-  const mockFetch = fetch as jest.MockedFunction<typeof fetch>
+  const mockProductService = productService as jest.Mocked<
+    typeof productService
+  >
 
   beforeEach(() => {
     jest.clearAllMocks()
@@ -30,7 +30,6 @@ describe('useProductsDetails', () => {
       breadcrumb: [],
       setBreadcrumb: mockSetBreadcrumb,
     })
-    mockBuildApiUrl.mockReturnValue('http://localhost:8080/items/MLA123456789')
   })
 
   it('inicializa con estado por defecto', () => {
@@ -45,7 +44,7 @@ describe('useProductsDetails', () => {
     const { result } = renderHook(() => useProductsDetails(''))
 
     expect(result.current.product).toBe(null)
-    expect(mockFetch).not.toHaveBeenCalled()
+    expect(mockProductService.getProductDetail).not.toHaveBeenCalled()
   })
 
   it('obtiene detalles del producto cuando id es válido', async () => {
@@ -59,9 +58,9 @@ describe('useProductsDetails', () => {
       item: {
         id: 'MLA123456789',
         title: 'iPhone 14 Pro Max',
-        price: { currency: 'ARS', amount: 1000000, decimals: 2 },
+        price: { currency: 'ARS' as const, amount: 1000000, decimals: 2 },
         picture: 'https://example.com/iphone.jpg',
-        condition: 'new',
+        condition: 'new' as const,
         free_shipping: 'true',
         categories: ['Electrónicos', 'Celulares', 'iPhone'],
         mainPicture: 'https://example.com/iphone-main.jpg',
@@ -74,10 +73,7 @@ describe('useProductsDetails', () => {
       },
     }
 
-    mockFetch.mockResolvedValueOnce({
-      ok: true,
-      json: async () => mockProductDetail,
-    } as Response)
+    mockProductService.getProductDetail.mockResolvedValueOnce(mockProductDetail)
 
     const { result } = renderHook(() => useProductsDetails('MLA123456789'))
 
@@ -94,14 +90,13 @@ describe('useProductsDetails', () => {
       'Celulares',
       'iPhone',
     ])
-    expect(mockBuildApiUrl).toHaveBeenCalledWith('/items/MLA123456789')
+    expect(mockProductService.getProductDetail).toHaveBeenCalledWith(
+      'MLA123456789'
+    )
   })
 
   it('maneja respuesta 404 correctamente', async () => {
-    mockFetch.mockResolvedValueOnce({
-      status: 404,
-      ok: false,
-    } as Response)
+    mockProductService.getProductDetail.mockResolvedValueOnce(null)
 
     const { result } = renderHook(() =>
       useProductsDetails('producto-inexistente')
@@ -116,7 +111,9 @@ describe('useProductsDetails', () => {
   })
 
   it('maneja errores de red', async () => {
-    mockFetch.mockRejectedValueOnce(new Error('Error de red'))
+    mockProductService.getProductDetail.mockRejectedValueOnce(
+      new Error('Error de red')
+    )
 
     const { result } = renderHook(() => useProductsDetails('MLA123456789'))
 
@@ -129,10 +126,9 @@ describe('useProductsDetails', () => {
   })
 
   it('maneja errores HTTP', async () => {
-    mockFetch.mockResolvedValueOnce({
-      ok: false,
-      status: 500,
-    } as Response)
+    mockProductService.getProductDetail.mockRejectedValueOnce(
+      new Error('Error al obtener productos')
+    )
 
     const { result } = renderHook(() => useProductsDetails('MLA123456789'))
 
@@ -155,9 +151,9 @@ describe('useProductsDetails', () => {
       item: {
         id: 'MLA123456789',
         title: 'Producto sin categorías',
-        price: { currency: 'ARS', amount: 1000, decimals: 2 },
+        price: { currency: 'ARS' as const, amount: 1000, decimals: 2 },
         picture: 'https://example.com/product.jpg',
-        condition: 'new',
+        condition: 'new' as const,
         free_shipping: 'false',
         categories: [],
         mainPicture: 'https://example.com/product-main.jpg',
@@ -170,10 +166,7 @@ describe('useProductsDetails', () => {
       },
     }
 
-    mockFetch.mockResolvedValueOnce({
-      ok: true,
-      json: async () => mockProductDetail,
-    } as Response)
+    mockProductService.getProductDetail.mockResolvedValueOnce(mockProductDetail)
 
     const { result } = renderHook(() => useProductsDetails('MLA123456789'))
 
@@ -196,10 +189,11 @@ describe('useProductsDetails', () => {
       item: {
         id: 'MLA123456789',
         title: 'Producto sin categorías',
-        price: { currency: 'ARS', amount: 1000, decimals: 2 },
+        price: { currency: 'ARS' as const, amount: 1000, decimals: 2 },
         picture: 'https://example.com/product.jpg',
-        condition: 'new',
+        condition: 'new' as const,
         free_shipping: 'false',
+        categories: [],
         mainPicture: 'https://example.com/product-main.jpg',
         variants: [],
         stock: 5,
@@ -210,10 +204,7 @@ describe('useProductsDetails', () => {
       },
     }
 
-    mockFetch.mockResolvedValueOnce({
-      ok: true,
-      json: async () => mockProductDetail,
-    } as Response)
+    mockProductService.getProductDetail.mockResolvedValueOnce(mockProductDetail)
 
     const { result } = renderHook(() => useProductsDetails('MLA123456789'))
 
@@ -236,9 +227,9 @@ describe('useProductsDetails', () => {
       item: {
         id: 'MLA123456789',
         title: 'iPhone',
-        price: { currency: 'ARS', amount: 1000000, decimals: 2 },
+        price: { currency: 'ARS' as const, amount: 1000000, decimals: 2 },
         picture: 'https://example.com/iphone.jpg',
-        condition: 'new',
+        condition: 'new' as const,
         free_shipping: 'true',
         categories: ['Electrónicos'],
         mainPicture: 'https://example.com/iphone-main.jpg',
@@ -261,9 +252,9 @@ describe('useProductsDetails', () => {
       item: {
         id: 'MLA987654321',
         title: 'Samsung',
-        price: { currency: 'ARS', amount: 800000, decimals: 2 },
+        price: { currency: 'ARS' as const, amount: 800000, decimals: 2 },
         picture: 'https://example.com/samsung.jpg',
-        condition: 'new',
+        condition: 'new' as const,
         free_shipping: 'true',
         categories: ['Celulares'],
         mainPicture: 'https://example.com/samsung-main.jpg',
@@ -276,15 +267,9 @@ describe('useProductsDetails', () => {
       },
     }
 
-    mockFetch
-      .mockResolvedValueOnce({
-        ok: true,
-        json: async () => mockProduct1,
-      } as Response)
-      .mockResolvedValueOnce({
-        ok: true,
-        json: async () => mockProduct2,
-      } as Response)
+    mockProductService.getProductDetail
+      .mockResolvedValueOnce(mockProduct1)
+      .mockResolvedValueOnce(mockProduct2)
 
     const { result, rerender } = renderHook(
       ({ id }) => useProductsDetails(id),
@@ -309,7 +294,9 @@ describe('useProductsDetails', () => {
     })
 
     expect(result.current.product).toEqual(mockProduct2)
-    expect(mockBuildApiUrl).toHaveBeenCalledWith('/items/MLA987654321')
+    expect(mockProductService.getProductDetail).toHaveBeenCalledWith(
+      'MLA987654321'
+    )
   })
 
   it('maneja IDs con caracteres especiales', async () => {
@@ -323,9 +310,9 @@ describe('useProductsDetails', () => {
       item: {
         id: 'MLA-123-456-789',
         title: 'Producto con ID especial',
-        price: { currency: 'ARS', amount: 1000, decimals: 2 },
+        price: { currency: 'ARS' as const, amount: 1000, decimals: 2 },
         picture: 'https://example.com/product.jpg',
-        condition: 'new',
+        condition: 'new' as const,
         free_shipping: 'false',
         categories: ['Electrónicos'],
         mainPicture: 'https://example.com/product-main.jpg',
@@ -338,21 +325,17 @@ describe('useProductsDetails', () => {
       },
     }
 
-    mockFetch.mockResolvedValueOnce({
-      ok: true,
-      json: async () => mockProductDetail,
-    } as Response)
+    mockProductService.getProductDetail.mockResolvedValueOnce(mockProductDetail)
 
     renderHook(() => useProductsDetails('MLA-123-456-789'))
 
-    expect(mockBuildApiUrl).toHaveBeenCalledWith('/items/MLA-123-456-789')
+    expect(mockProductService.getProductDetail).toHaveBeenCalledWith(
+      'MLA-123-456-789'
+    )
   })
 
   it('maneja respuesta nula', async () => {
-    mockFetch.mockResolvedValueOnce({
-      ok: true,
-      json: async () => null,
-    } as Response)
+    mockProductService.getProductDetail.mockResolvedValueOnce(null)
 
     const { result } = renderHook(() => useProductsDetails('MLA123456789'))
 

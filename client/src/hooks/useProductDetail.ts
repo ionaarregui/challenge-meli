@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import type { ProductDetail } from '../types/Product'
 import { useBreadcrumb } from '../contexts/BreadcrumContext'
-import { buildApiUrl } from '../common/config'
+import { productService } from '../services/productService'
 
 export function useProductsDetails(id: string | undefined) {
   const { setBreadcrumb } = useBreadcrumb()
@@ -14,28 +14,25 @@ export function useProductsDetails(id: string | undefined) {
       setProduct(null)
       return
     }
+
     setLoading(true)
     setError(null)
-    fetch(buildApiUrl(`/items/${encodeURIComponent(id)}`))
-      .then((res) => {
-        if (res.status === 404) {
-          setProduct(null)
-          return null
-        }
-        if (!res.ok) throw new Error('Error al obtener productos')
-        return res.json()
-      })
+
+    productService
+      .getProductDetail(id)
       .then((data) => {
         if (data) {
           setBreadcrumb(data.item.categories || [])
-          setProduct(data || null)
+          setProduct(data)
+        } else {
+          setProduct(null)
         }
       })
       .catch((err) => {
         setError(err.message)
       })
       .finally(() => setLoading(false))
-  }, [id])
+  }, [id, setBreadcrumb])
 
   return { product, loading, error }
 }
