@@ -1,6 +1,14 @@
+import { useEffect } from 'react'
+import { useBreadcrumb } from '../contexts/BreadcrumContext'
 import styles from './Home.module.scss'
 
 export default function Home() {
+  const { setBreadcrumb } = useBreadcrumb()
+
+  useEffect(() => {
+    setBreadcrumb([])
+  }, [])
+
   //TODO carrousel de  destacados
   return (
     <div>

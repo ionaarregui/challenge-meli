@@ -1,0 +1,21 @@
+.container {
+  text-align: center;
+  margin: auto;
+  padding: 2rem;
+}
+
+.title {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.link {
+  text-decoration: none;
+  color: #3483fa;
+  font-weight: 500;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #2968c8;
+  }
+}

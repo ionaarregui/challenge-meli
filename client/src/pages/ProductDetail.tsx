@@ -3,16 +3,17 @@ import { useProductsDetails } from '../hooks/useProductDetail'
 import Spinner from '../components/Spinner'
 import ProductDetailCard from '../components/ProductDetailCard'
 import BuyBoxProduct from '../components/BuyBoxProduct'
+import ProductNotFound from '../components/ProductNotFound'
 import styles from './ProductDetail.module.scss'
+import { Error } from '../components/Error'
 
 export default function ProductDetail() {
   const { id } = useParams<{ id: string }>()
   const { product, loading, error } = useProductsDetails(id)
 
   if (loading) return <Spinner />
-  if (error) return <p className={styles.error}>{error}</p>
-
-  if (!product) return <h2>Producto no encontrado</h2>
+  if (error) return <Error />
+  if (!product) return <ProductNotFound />
 
   return (
     <section>

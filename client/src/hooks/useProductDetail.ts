@@ -18,14 +18,22 @@ export function useProductsDetails(id: string | undefined) {
     setError(null)
     fetch(buildApiUrl(`/items/${encodeURIComponent(id)}`))
       .then((res) => {
+        if (res.status === 404) {
+          setProduct(null)
+          return null
+        }
         if (!res.ok) throw new Error('Error al obtener productos')
         return res.json()
       })
       .then((data) => {
-        // setBreadcrumb(data.categories || [])
-        setProduct(data || null)
+        if (data) {
+          setBreadcrumb(data.item.categories || [])
+          setProduct(data || null)
+        }
       })
-      .catch((err) => setError(err.message))
+      .catch((err) => {
+        setError(err.message)
+      })
       .finally(() => setLoading(false))
   }, [id])
 

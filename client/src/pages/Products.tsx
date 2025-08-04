@@ -3,7 +3,8 @@ import { useProductsSearch } from '../hooks/useProductsSearch'
 
 import Spinner from '../components/Spinner'
 import ProductCard from '../components/ProductCard'
-import styles from './Products.module.scss'
+import { Error } from '../components/Error'
+import EmptyResults from '../components/EmptyResults'
 
 export default function Products() {
   const [searchParams] = useSearchParams()
@@ -11,10 +12,11 @@ export default function Products() {
   const { products, loading, error } = useProductsSearch(search)
 
   if (loading) return <Spinner />
-  if (error) return <p className={styles.error}>{error}</p>
-  return !products || products.length === 0 ? (
-    <p>No se encontraron productos</p>
-  ) : (
+  if (error) return <Error />
+
+  if (products?.length === 0) return <EmptyResults searchTerm={search} />
+
+  return (
     <section>
       {products.map((product) => (
         <ProductCard key={product.id} product={product} />
