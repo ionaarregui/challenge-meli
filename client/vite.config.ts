@@ -8,6 +8,7 @@ export default defineConfig(({ mode }) => {
     plugins: [react()],
     server: {
       port: parseInt(env.VITE_CLIENT_PORT || '3000'),
+      historyApiFallback: true,
     },
   }
 })

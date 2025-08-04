@@ -35,9 +35,9 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       <div className={styles.info}>
         <p className={styles.title}>{product.title}</p>
         <AmountLabel {...product.price} />
-        {product.free_shipping && (
+        {product.free_shipping === 'true' && (
           <Badge variant="primary" color="success" size="medium">
-            {product.free_shipping}
+            {FREE_SHIPPING_TEXT}
           </Badge>
         )}
       </div>
