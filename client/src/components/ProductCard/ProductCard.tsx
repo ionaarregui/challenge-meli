@@ -25,7 +25,11 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   }
 
   return (
-    <div className={styles.card} onClick={handlerClick} data-testid="product-card">
+    <div
+      className={styles.card}
+      onClick={handlerClick}
+      data-testid="product-card"
+    >
       <div className={styles.image}>
         <img src={product.picture} alt={product.title} />
       </div>

@@ -1,0 +1,74 @@
+{
+  "searchResults": {
+    "items": [
+      {
+        "id": "MLA123456789",
+        "title": "iPhone 14 Pro Max 256GB",
+        "price": {
+          "currency": "ARS",
+          "amount": 1500000,
+          "decimals": 2
+        },
+        "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_123456-MLA123456789_072023-F.webp",
+        "condition": "new",
+        "free_shipping": "true",
+        "rating": {
+          "score": 4.5,
+          "count": 128
+        }
+      },
+      {
+        "id": "MLA987654321",
+        "title": "Samsung Galaxy S23 Ultra",
+        "price": {
+          "currency": "ARS",
+          "amount": 1200000,
+          "decimals": 2
+        },
+        "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_987654-MLA987654321_072023-F.webp",
+        "condition": "new",
+        "free_shipping": "false",
+        "rating": {
+          "score": 4.2,
+          "count": 95
+        }
+      }
+    ],
+    "categories": ["Electrónicos", "Celulares", "Smartphones"]
+  },
+  "productDetail": {
+    "author": {
+      "userName": "test_user",
+      "name": "Test",
+      "lastname": "User",
+      "sold_quantity": "100"
+    },
+    "item": {
+      "id": "MLA123456789",
+      "title": "iPhone 14 Pro Max 256GB",
+      "price": {
+        "currency": "ARS",
+        "amount": 1500000,
+        "decimals": 2
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_123456-MLA123456789_072023-F.webp",
+      "condition": "new",
+      "free_shipping": "true",
+      "categories": ["Electrónicos", "Celulares", "iPhone"],
+      "mainPicture": "https://http2.mlstatic.com/D_NQ_NP_2X_123456-MLA123456789_072023-F.webp",
+      "variants": [],
+      "stock": 10,
+      "sold_quantity": "50",
+      "rating": {
+        "score": 4.5,
+        "count": 128
+      },
+      "bestPrice": true,
+      "description": "iPhone 14 Pro Max con chip A16 Bionic, cámara de 48MP y pantalla Super Retina XDR de 6.7 pulgadas."
+    }
+  },
+  "emptyResults": {
+    "items": [],
+    "categories": []
+  }
+}
