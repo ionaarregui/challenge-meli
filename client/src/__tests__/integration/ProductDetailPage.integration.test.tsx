@@ -5,15 +5,12 @@ import { BreadcrumbProvider } from '../../contexts/BreadcrumContext'
 import ProductDetail from '../../pages/ProductDetail'
 import { buildApiUrl } from '../../common/config'
 
-// Mock de la función buildApiUrl
 jest.mock('../../common/config', () => ({
   buildApiUrl: jest.fn(),
 }))
 
-// Mock de fetch global
 global.fetch = jest.fn()
 
-// Mock de los componentes hijos para simplificar el test
 jest.mock('../../components/ProductDetailCard', () => {
   return function MockProductDetailCard({ product }: any) {
     return (
@@ -57,7 +54,6 @@ jest.mock('../../components/ProductNotFound', () => {
   }
 })
 
-// Mock de useParams
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
   useParams: () => ({ id: 'MLA123456789' }),
@@ -81,7 +77,6 @@ describe('ProductDetail Page Integration', () => {
   })
 
   it('muestra spinner mientras carga', async () => {
-    // Simular una respuesta lenta
     mockFetch.mockImplementation(
       () =>
         new Promise((resolve) =>
@@ -170,7 +165,6 @@ describe('ProductDetail Page Integration', () => {
     expect(screen.getByText('Comprar iPhone 14 Pro Max')).toBeInTheDocument()
     expect(screen.getByText('Vendedor: Test User')).toBeInTheDocument()
 
-    // Verificar que se muestra la descripción
     expect(screen.getByText('Descripción')).toBeInTheDocument()
     expect(screen.getByText('Descripción del iPhone')).toBeInTheDocument()
 

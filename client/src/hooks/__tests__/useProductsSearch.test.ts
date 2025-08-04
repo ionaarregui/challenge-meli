@@ -3,12 +3,10 @@ import { useBreadcrumb } from '../../contexts/BreadcrumContext'
 import { useProductsSearch } from '../useProductsSearch'
 import { productService } from '../../services/productService'
 
-// Mock del contexto BreadcrumbContext
 jest.mock('../../contexts/BreadcrumContext', () => ({
   useBreadcrumb: jest.fn(),
 }))
 
-// Mock del servicio de productos
 jest.mock('../../services/productService', () => ({
   productService: {
     searchProducts: jest.fn(),
@@ -224,7 +222,6 @@ describe('useProductsSearch', () => {
 
     expect(result.current.products).toEqual(mockProducts1)
 
-    // Cambiar el término de búsqueda
     rerender({ search: 'Samsung' })
 
     expect(result.current.loading).toBe(true)

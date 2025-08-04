@@ -6,15 +6,12 @@ import { SearchProvider } from '../../contexts/SearchContext'
 import Products from '../../pages/Products'
 import { buildApiUrl } from '../../common/config'
 
-// Mock de la función buildApiUrl
 jest.mock('../../common/config', () => ({
   buildApiUrl: jest.fn(),
 }))
 
-// Mock de fetch global
 global.fetch = jest.fn()
 
-// Mock de los componentes hijos para simplificar el test
 jest.mock('../../components/ProductCard', () => {
   return function MockProductCard({ product }: any) {
     return (

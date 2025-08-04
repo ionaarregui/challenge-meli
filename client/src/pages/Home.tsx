@@ -12,7 +12,6 @@ export default function Home() {
     clearSearch()
   }, [setBreadcrumb, clearSearch])
 
-  //TODO carrousel de  destacados
   return (
     <div>
       <img

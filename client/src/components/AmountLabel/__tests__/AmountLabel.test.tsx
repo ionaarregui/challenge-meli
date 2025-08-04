@@ -47,7 +47,7 @@ describe('AmountLabel Component', () => {
       screen.getByText('Precio sin impuestos nacionales:')
     ).toBeInTheDocument()
     const priceElements = screen.getAllByText('$ 15.000,00')
-    expect(priceElements).toHaveLength(2) // Una en el precio principal y otra en la leyenda
+    expect(priceElements).toHaveLength(2)
   })
 
   it('no muestra la leyenda de impuestos cuando showNotTax es false', () => {

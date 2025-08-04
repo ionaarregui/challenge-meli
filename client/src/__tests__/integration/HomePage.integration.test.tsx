@@ -5,7 +5,6 @@ import { BreadcrumbProvider } from '../../contexts/BreadcrumContext'
 import { SearchProvider } from '../../contexts/SearchContext'
 import Home from '../../pages/Home'
 
-// Mock de la imagen del banner
 jest.mock('../../pages/Home.module.scss', () => ({
   banner: 'banner-class',
 }))
@@ -36,9 +35,6 @@ describe('Home Page Integration', () => {
   })
 
   it('limpia el breadcrumb al cargar la página', () => {
-    // Este test verifica que el useEffect se ejecute correctamente
-    // aunque no podemos verificar directamente el estado del contexto
-    // debido a que está encapsulado, verificamos que la página se renderice correctamente
     renderWithProviders(<Home />)
 
     expect(

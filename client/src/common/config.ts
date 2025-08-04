@@ -1,4 +1,3 @@
-// Configuración de la API
 export const API_CONFIG = {
   BASE_URL: import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080',
   ENDPOINTS: {
@@ -7,7 +6,6 @@ export const API_CONFIG = {
   },
 } as const
 
-// Función helper para construir URLs de la API
 export const buildApiUrl = (
   endpoint: string,
   params?: Record<string, string>

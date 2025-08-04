@@ -28,7 +28,6 @@ describe('BreadCrumb Component', () => {
     expect(screen.getByText(/Celulares/)).toBeInTheDocument()
     expect(screen.getByText(/iPhone/)).toBeInTheDocument()
 
-    // Verifica que hay separadores entre los pasos
     const container = screen.getByText(/Electrónicos/).closest('div')
     const stepElements = container?.querySelectorAll('.breadcrumb-step')
     const separators = Array.from(stepElements || []).filter((element) =>
@@ -76,7 +75,7 @@ describe('BreadCrumb Component', () => {
     const separators = Array.from(stepElements || []).filter((element) =>
       element.textContent?.includes(' > ')
     )
-    expect(separators).toHaveLength(2) // Solo 2 separadores para 3 pasos
+    expect(separators).toHaveLength(2)
   })
 
   it('maneja pasos con caracteres especiales', () => {

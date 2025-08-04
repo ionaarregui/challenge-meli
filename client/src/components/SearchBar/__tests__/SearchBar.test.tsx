@@ -4,12 +4,10 @@ import { BrowserRouter } from 'react-router-dom'
 import SearchBar from '../index'
 import { SearchProvider } from '../../../contexts/SearchContext'
 
-// Mock del hook useSearchSync
 jest.mock('../../../hooks/useSearchSync', () => ({
   useSearchSync: jest.fn(),
 }))
 
-// Mock del componente SearchButton
 jest.mock('../SearchButton', () => {
   return function MockSearchButton() {
     return (

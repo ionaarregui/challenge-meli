@@ -8,10 +8,8 @@ export default function SearchBar() {
   const { searchTerm, performSearch } = useSearch()
   const [query, setQuery] = useState<string>(searchTerm)
 
-  // Sincronizar con la URL
   useSearchSync()
 
-  // Sincronizar el input cuando cambie el searchTerm del contexto
   useEffect(() => {
     setQuery(searchTerm)
   }, [searchTerm])

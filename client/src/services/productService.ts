@@ -2,9 +2,6 @@ import { buildApiUrl } from '../common/config'
 import type { ProductsSearchResult, ProductDetail } from '../types/Product'
 
 export const productService = {
-  /**
-   * Busca productos por término de búsqueda
-   */
   async searchProducts(search: string): Promise<ProductsSearchResult> {
     const response = await fetch(buildApiUrl('/items', { search }))
 
@@ -19,9 +16,6 @@ export const productService = {
     return response.json()
   },
 
-  /**
-   * Obtiene el detalle de un producto por ID
-   */
   async getProductDetail(id: string): Promise<ProductDetail | null> {
     const response = await fetch(
       buildApiUrl(`/items/${encodeURIComponent(id)}`)
