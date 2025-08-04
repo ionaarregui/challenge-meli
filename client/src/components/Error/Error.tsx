@@ -12,7 +12,7 @@ interface ErrorProps {
 
 export default function Error({
   title = 'Ha ocurrido un error inesperado',
-  message = 'Por favor volvé a intentarlo más tarde',
+  message,
   actionButton = null,
 }: ErrorProps) {
   const navigate = useNavigate()
@@ -22,7 +22,7 @@ export default function Error({
   }
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} data-testid="error-component">
       <h2 className={styles.title}>{title}</h2>
       {message && <p className={styles.message}>{message}</p>}
       {actionButton ? (

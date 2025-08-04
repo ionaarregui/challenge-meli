@@ -14,7 +14,7 @@ interface BuyBoxProductProps {
 
 export default function BuyBoxProduct({ product, author }: BuyBoxProductProps) {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} data-testid="buy-box-product">
       {product.bestPrice && (
         <Badge
           variant="secondary"

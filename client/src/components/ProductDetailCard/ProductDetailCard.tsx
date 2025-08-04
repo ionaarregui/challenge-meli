@@ -11,7 +11,7 @@ interface ProductDetailCard {
 
 export default function ProductDetailCard({ product }: ProductDetailCard) {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} data-testid="product-detail-card">
       <img className={styles.image} src={product.mainPicture} alt="" />
       <div className={styles.productInfo}>
         <div className={styles.header}>

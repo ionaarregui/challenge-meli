@@ -19,13 +19,15 @@ export default function ProductNotFound() {
   }
 
   return (
-    <Error
-      title="Producto no encontrado"
-      message="El producto que buscas no existe o ha sido removido."
-      actionButton={{
-        label: location.state?.from ? TEXT_BACK.search : TEXT_BACK.home,
-        onClick: handleBack,
-      }}
-    />
+    <div data-testid="product-not-found">
+      <Error
+        title="Producto no encontrado"
+        message="El producto que buscas no existe o ha sido removido."
+        actionButton={{
+          label: location.state?.from ? TEXT_BACK.search : TEXT_BACK.home,
+          onClick: handleBack,
+        }}
+      />
+    </div>
   )
 }

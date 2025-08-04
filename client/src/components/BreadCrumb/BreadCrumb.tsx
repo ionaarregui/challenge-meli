@@ -12,12 +12,13 @@ export default function BreadCrumb({ steps }: PropsBreadCrumb) {
   }
 
   return (
-    <div className={styles.breadcrumb}>
+    <div className={styles.breadcrumb} data-testid="breadcrumb">
       {steps.map((step, index) => (
         <span
           className={styles['breadcrumb-step']}
           key={index}
           onClick={() => handleClick(step)}
+          data-testid={`breadcrumb-step-${index}`}
         >
           {step}
           {index < steps.length - 1 && ' > '}

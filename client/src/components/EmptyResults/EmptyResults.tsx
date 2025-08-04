@@ -14,9 +14,10 @@ interface EmptyResultsProps {
 export default function EmptyResults({ searchTerm }: EmptyResultsProps) {
   const location = useLocation()
   const navigate = useNavigate()
-  const titleText = searchTerm
-    ? `No se encontraron productos para "${searchTerm}"`
-    : 'No se encontraron productos'
+  const titleText =
+    searchTerm && searchTerm.trim()
+      ? `No se encontraron productos para "${searchTerm}"`
+      : 'No se encontraron productos'
   const handleBack = () => {
     if (location.state?.from) {
       navigate(-1)
@@ -26,13 +27,15 @@ export default function EmptyResults({ searchTerm }: EmptyResultsProps) {
   }
 
   return (
-    <Error
-      title={titleText}
-      message="Intenta con otros términos de búsqueda o revisa la ortografía."
-      actionButton={{
-        label: location.state?.from ? TEXT_BACK.search : TEXT_BACK.home,
-        onClick: handleBack,
-      }}
-    />
+    <div data-testid="empty-results">
+      <Error
+        title={titleText}
+        message="Intenta con otros términos de búsqueda o revisa la ortografía."
+        actionButton={{
+          label: location.state?.from ? TEXT_BACK.search : TEXT_BACK.home,
+          onClick: handleBack,
+        }}
+      />
+    </div>
   )
 }

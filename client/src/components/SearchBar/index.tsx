@@ -30,6 +30,7 @@ export default function SearchBar() {
           aria-label="Ingresá lo que quieras encontrar"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
+          data-testid="search-input"
         />
         <SearchButton />
       </div>

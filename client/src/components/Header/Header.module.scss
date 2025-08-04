@@ -22,12 +22,11 @@
   overflow: hidden;
   text-indent: -999px;
   background-image: url('https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/6.6.139/mercadolibre/logo_large_plus@2x.webp');
-  height: 34px;
+  height: auto;
   width: 134px;
   display: flex;
   position: static;
-  left: 0;
-  top: 0;
+
   background-size: contain;
   cursor: pointer;
   transition: opacity 0.2s ease;
