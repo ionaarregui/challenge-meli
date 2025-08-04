@@ -1,13 +1,16 @@
 import { useEffect } from 'react'
 import { useBreadcrumb } from '../contexts/BreadcrumContext'
+import { useSearch } from '../contexts/SearchContext'
 import styles from './Home.module.scss'
 
 export default function Home() {
   const { setBreadcrumb } = useBreadcrumb()
+  const { clearSearch } = useSearch()
 
   useEffect(() => {
     setBreadcrumb([])
-  }, [])
+    clearSearch()
+  }, [setBreadcrumb, clearSearch])
 
   //TODO carrousel de  destacados
   return (
