@@ -8,17 +8,4 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-
-  &:active {
-    transform: scale(0.95);
-  }
 }
-
-.heartIcon {
-  transition: all 0.2s ease;
-
-  &.active {
-    transform: scale(1.1);
-  }
-} 
