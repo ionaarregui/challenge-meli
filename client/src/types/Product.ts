@@ -14,7 +14,7 @@ export interface Product {
   price: Price
   picture: string
   condition: Condition
-  free_shipping: boolean
+  free_shipping: string
   rating?: Rating
 }
 

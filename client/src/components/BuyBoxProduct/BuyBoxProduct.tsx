@@ -35,10 +35,8 @@ export default function BuyBoxProduct({ product, author }: BuyBoxProductProps) {
       </div>
 
       <ShippingSection
-        free={product.free_shipping}
-        arrivalDate={product.free_shipping ? 'llega gratis mañana' : ''}
+        arrivalDate={product.free_shipping}
         pickupDate={product.retiro || ''}
-        pickupLocation="correo y otros puntos"
       />
 
       <StockSection available={product.stock} selected={1} />

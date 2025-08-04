@@ -5,7 +5,7 @@ import AmountLabel from '../AmountLabel'
 import Badge from '../Badge'
 import Rating from '../Rating'
 import { FREE_SHIPPING_TEXT } from '../../common/constants'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 
 interface ProductCardProps {
   product: Product
@@ -13,9 +13,15 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const navigate = useNavigate()
+  const location = useLocation()
 
   const handlerClick = () => {
-    navigate(`/items/${product.id}`, { state: { product } })
+    navigate(`/items/${product.id}`, {
+      state: {
+        product,
+        from: location.pathname + location.search,
+      },
+    })
   }
 
   return (

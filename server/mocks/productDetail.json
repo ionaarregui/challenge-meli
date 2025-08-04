@@ -18,7 +18,8 @@
       },     
       "mainPicture": "https://http2.mlstatic.com/D_NQ_NP_2X_660762-MLA74048129932_012024-F.webp",
       "categories": ["Tecnologia", "Celulares", "Smartphones"],
-      "variants": [{
+      "variants": [
+        {
         "variant_type": "color",
         "variant":[{
           "variant_value":"Negro",
@@ -27,6 +28,17 @@
         {
           "variant_value":"Amarillo",
           "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_926322-MLA74054728731_012024-F.webp"
+        }        
+      ]
+      },{
+        "variant_type": "Memoria",
+        "variant":[{
+          "variant_value":"128 GB",
+          "picture": null
+        },
+        {
+          "variant_value":"512 GB",
+          "picture":null
         }        
       ]
       }],
@@ -97,17 +109,17 @@
         "decimals": 0,
         "withoutTax": 645000
       },
-      "mainPicture": "https://http2.mlstatic.com/D_NQ_NP_2X_834839-MLA50292961429_062022-V.webp",
+      "mainPicture": "https://http2.mlstatic.com/D_NQ_NP_2X_810863-MLA83995138775_042025-F.webp",
       "categories": ["Tecnologia", "Celulares", "Smartphones"],
       "variants": [{
         "variant_type": "color",
         "variant":[{
-          "variant_value":"Awesome Black",
-          "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_834839-MLA50292961429_062022-V.webp"
+          "variant_value":"Negro",
+          "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_810863-MLA83995138775_042025-F.webp"
         },
         {
-          "variant_value":"Blanco",
-          "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_926322-MLA74054728731_012024-F.webp"
+          "variant_value":"Lavanda",
+          "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_841998-MLA83399250348_042025-F.webp"
         }        
       ]
       }],
@@ -140,18 +152,14 @@
         "decimals": 0,
         "withoutTax": 580000
       },
-      "mainPicture": "https://http2.mlstatic.com/D_NQ_NP_2X_834839-MLA50292961429_062022-V.webp",
+      "mainPicture": "https://http2.mlstatic.com/D_NQ_NP_2X_715306-MLA86743712132_072025-F.webp",
       "categories": ["Tecnologia", "Celulares", "Smartphones"],
       "variants": [{
         "variant_type": "color",
         "variant":[{
-          "variant_value":"Negro",
-          "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_834839-MLA50292961429_062022-V.webp"
-        },
-        {
           "variant_value":"Verde",
-          "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_926322-MLA74054728731_012024-F.webp"
-        }        
+          "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_715306-MLA86743712132_072025-F.webp"
+        }       
       ]
       }],
       "stock": 4,
@@ -186,14 +194,14 @@
       "mainPicture": "https://http2.mlstatic.com/D_NQ_NP_2X_834839-MLA50292961429_062022-V.webp",
       "categories": ["Tecnologia", "Celulares", "Smartphones"],
       "variants": [{
-        "variant_type": "color",
+        "variant_type": "Memoria",
         "variant":[{
-          "variant_value":"Midnight",
-          "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_834839-MLA50292961429_062022-V.webp"
+          "variant_value":"128 GB",
+          "picture": null
         },
         {
-          "variant_value":"Azul",
-          "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_926322-MLA74054728731_012024-F.webp"
+          "variant_value":"512 GB",
+          "picture":null
         }        
       ]
       }],
@@ -226,17 +234,17 @@
         "decimals": 0,
         "withoutTax": 148000
       },
-      "mainPicture": "https://http2.mlstatic.com/D_NQ_NP_2X_834839-MLA50292961429_062022-V.webp",
+      "mainPicture": "https://http2.mlstatic.com/D_NQ_NP_843525-MLA69794402865_062023-O.webp",
       "categories": ["Ropa y accesorios", "Abrigo", "Campera"],
       "variants": [{
         "variant_type": "color",
         "variant":[{
           "variant_value":"Azul",
-          "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_834839-MLA50292961429_062022-V.webp"
+          "picture": "https://http2.mlstatic.com/D_NQ_NP_843525-MLA69794402865_062023-O.webp"
         },
         {
           "variant_value":"Negro",
-          "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_926322-MLA74054728731_012024-F.webp"
+          "picture": "https://http2.mlstatic.com/D_NQ_NP_684353-MLA69777974064_062023-O.webp"
         }        
       ]
       }],
@@ -269,17 +277,17 @@
         "decimals": 0,
         "withoutTax": 185000
       },
-      "mainPicture": "https://http2.mlstatic.com/D_NQ_NP_2X_834839-MLA50292961429_062022-V.webp",
+      "mainPicture": "https://http2.mlstatic.com/D_NQ_NP_2X_627663-MLA83990855012_052025-T.webp",
       "categories": ["Ropa y accesorios", "Abrigo", "Campera"],
       "variants": [{
-        "variant_type": "color",
+        "variant_type": "Talle",
         "variant":[{
-          "variant_value":"Negro",
-          "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_834839-MLA50292961429_062022-V.webp"
+          "variant_value":"S",
+          "picture": null
         },
         {
-          "variant_value":"Marrón",
-          "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_926322-MLA74054728731_012024-F.webp"
+          "variant_value":"XL",
+          "picture": null
         }        
       ]
       }],

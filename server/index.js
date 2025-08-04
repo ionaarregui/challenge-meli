@@ -29,7 +29,7 @@ app.get("/items", (req, res) => {
 
   if (search) {
     const term = search.toLowerCase();
-    console.log({term})
+ 
     results = products.filter(
       (p) =>
         p.title.toLowerCase().includes(term) ||
@@ -39,14 +39,10 @@ app.get("/items", (req, res) => {
 
 
   if (results.length === 0) {
-    return res.status(400).json({ error: "No se encontraron productos" });
+    return res.status(404).json({ error: "No se encontraron productos" });
   }
 
-  res.json({"categories": [
-        "Tecnología",
-        "Celulares",
-        "Smartphones"
-    ], items:results});
+  res.json({"categories": results[0].categories, items:results});
 });
 
 

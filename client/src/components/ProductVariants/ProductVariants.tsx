@@ -24,22 +24,30 @@ export default function ProductVariants({
 
   return (
     <div className={styles.variantsContainer}>
-      <p className={styles.colorLabel}>
+      <p className={styles.variantLabel}>
         {variantLabel}
         {': '}
         <strong>{selectedVariant.variant_value}</strong>
       </p>
-      <div className={styles.variantsImages}>
+      <div className={styles.variants}>
         {productVariant.variant.map((value) => (
           <div
             key={value.variant_value}
             onClick={() => handleVariantClick(value)}
           >
-            <ThumbnailImage
-              imageUrl={value.picture}
-              alt={`producto ${productVariant.variant_type} ${value.variant_value}`}
-              isActive={selectedVariant.variant_value === value.variant_value}
-            />
+            {value.picture ? (
+              <ThumbnailImage
+                imageUrl={value.picture}
+                alt={`producto ${productVariant.variant_type} ${value.variant_value}`}
+                isActive={selectedVariant.variant_value === value.variant_value}
+              />
+            ) : (
+              <div
+                className={`${styles.variantText} ${selectedVariant.variant_value === value.variant_value && styles.active}`}
+              >
+                {value.variant_value}
+              </div>
+            )}
           </div>
         ))}
       </div>

@@ -2,31 +2,14 @@
   margin-top: 1rem;
 }
 
-.variantsImages {
+.variants {
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
+  align-items: stretch;
 }
 
-.variantThumbnail {
-  cursor: pointer;
-  border: 2px solid transparent;
-  border-radius: 4px;
-  transition: all 0.2s ease;
-  position: relative;
-
-  &:hover {
-    border-color: #3483fa;
-    transform: scale(1.05);
-  }
-
-  &.selected {
-    border-color: #3483fa;
-    box-shadow: 0 0 0 2px rgba(52, 131, 250, 0.2);
-  }
-}
-
-.colorLabel {
+.variantLabel {
   margin: 0 0 0.5rem 0;
   font-size: 14px;
   color: #333;
@@ -34,4 +17,16 @@
   strong {
     font-weight: 600;
   }
+}
+
+.variantText {
+  min-width: 44px;
+  text-align: center;
+  padding: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2509803922);
+  border-radius: 6px;
+}
+
+.active {
+  border: 2px solid #3483fa;
 }
