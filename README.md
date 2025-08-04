@@ -11,11 +11,34 @@ Este proyecto es una aplicación web desarrollada con React, TypeScript y Vite q
 - **React Router DOM** - Enrutamiento para aplicaciones React
 - **Sass/SCSS** - Preprocesador de CSS con CSS Modules
 - **ESLint + Prettier** - Linting y formateo de código
+- **Jest + React Testing Library** - Framework de testing para componentes
+- **Cypress** - Framework de testing end-to-end
 
 ### Backend (Servidor)
 - **Node.js** - Runtime de JavaScript
 - **Express.js** - Framework web para Node.js
 - **Nodemon** - Reinicio automático del servidor en desarrollo
+
+### Estructura de proyecto
+```
+challenge-meli/
+├── client/                 # Frontend React
+│   ├── src/
+│   │   ├── components/     # Componentes reutilizables
+│   │   ├── pages/         # Páginas de la aplicación
+│   │   ├── hooks/         # Custom hooks
+│   │   ├── types/         # Definiciones TypeScript
+│   │   ├── contexts/      # Contextos de React
+│   │   └── Layout/        # Layout principal
+│   ├── cypress/           # Tests E2E
+│   ├── package.json
+│   └── vite.config.ts
+├── server/                # Backend Express
+│   ├── mocks/            # Datos simulados
+│   ├── index.js          # Servidor principal
+│   └── package.json
+└── README.md
+```
 
 ## 📋 Prerrequisitos
 
@@ -55,7 +78,7 @@ npm run install:all
 
 ## 🚀 Ejecución
 
-### Opción 2: Ejecutar ambos simultáneamente
+### Opción 1: Ejecutar ambos simultáneamente
 
 ```bash
 npm run start
@@ -79,26 +102,94 @@ npm start
 ```
 El servidor se ejecutará en: **http://localhost:8080**
 
-## 📁 Estructura del Proyecto
+## 🧪 Testing
+
+El proyecto incluye una suite completa de tests con diferentes niveles de cobertura:
+
+### Tests Unitarios e Integración (Jest + React Testing Library)
+
+#### Ejecutar todos los tests unitarios e integración
+```bash
+cd client
+npm test
+```
+
+#### Ejecutar tests en modo watch (desarrollo)
+```bash
+cd client
+npm run test:watch
+```
+
+#### Ejecutar tests con coverage
+```bash
+cd client
+npm run test:coverage
+```
+
+#### Ejecutar tests específicos
+```bash
+cd client
+npm test -- --testPathPattern="ProductCard"
+```
+
+### Tests End-to-End (Cypress)
+
+#### Ejecutar tests E2E en modo headless
+```bash
+cd client
+npm run cypress:run
+```
+
+#### Abrir Cypress Test Runner (modo interactivo)
+```bash
+cd client
+npm run cypress:open
+```
+
+
+### Orden Recomendado para Ejecutar Tests
+
+1. **Tests Unitarios e Integración** (más rápidos)
+   ```bash
+   cd client
+   npm test
+   ```
+
+2. **Tests E2E** (requieren que la aplicación esté corriendo)
+   ```bash
+   # En una terminal: iniciar la aplicación
+   npm run start
+   
+   # En otra terminal: ejecutar tests E2E
+   cd client
+   npm run cypress:run
+   ```
+
+### Estructura de Tests
 
 ```
-challenge-meli/
-├── client/                 # Frontend React
-│   ├── src/
-│   │   ├── components/     # Componentes reutilizables
-│   │   ├── pages/         # Páginas de la aplicación
-│   │   ├── hooks/         # Custom hooks
-│   │   ├── types/         # Definiciones TypeScript
-│   │   ├── contexts/      # Contextos de React
-│   │   └── Layout/        # Layout principal
-│   ├── package.json
-│   └── vite.config.ts
-├── server/                # Backend Express
-│   ├── mocks/            # Datos simulados
-│   ├── index.js          # Servidor principal
-│   └── package.json
-└── README.md
+client/
+├── src/
+│   ├── __tests__/
+│   │   └── integration/          # Tests de integración
+│   │       ├── AppFlow.integration.test.tsx
+│   │       ├── HomePage.integration.test.tsx
+│   │       ├── ProductDetailPage.integration.test.tsx
+│   │       └── ProductsPage.integration.test.tsx
+│   ├── components/
+│   │   └── */__tests__/          # Tests unitarios de componentes
+│   └── hooks/
+│       └── __tests__/            # Tests unitarios de hooks
+└── cypress/
+    ├── e2e/                      # Tests E2E
+    │   ├── home.cy.ts
+    │   ├── pages.cy.ts
+    │   ├── product-detail.cy.ts
+    │   └── search.cy.ts
+    └── fixtures/                 # Datos de prueba
+        └── products.json
 ```
+
 
 ## 🔧 Variables de Entorno
 
@@ -115,6 +206,7 @@ SERVER_PORT=8080               # Puerto del servidor backend
 CLIENT_PORT=3000               # Puerto del cliente (para CORS)
 CLIENT_URL=http://localhost:3000  # URL del cliente (para CORS)
 ```
+
 ## 🌐 Endpoints del API
 
 ### Búsqueda de productos
@@ -163,6 +255,17 @@ CLIENT_URL=http://localhost:3001
 ### Error de CORS
 El servidor está configurado automáticamente para aceptar requests desde la URL del cliente definida en las variables de entorno. Si cambias los puertos, asegúrate de actualizar ambos archivos `.env`.
 
+### Problemas con Tests
+
+#### Tests E2E fallan
+- Asegúrate de que tanto el cliente como el servidor estén ejecutándose
+- Verifica que los puertos en `cypress.config.ts` coincidan con los de tu aplicación
+- Ejecuta `npm run cypress:open` para debuggear tests interactivamente
+
+#### Tests unitarios con warnings de `act()`
+- Estos warnings son normales en desarrollo y no afectan la funcionalidad
+- Los tests siguen siendo válidos y pasan correctamente
+
 ## 📝 Notas
 
 - Los datos son simulados y se encuentran en `server/mocks/`
@@ -170,5 +273,7 @@ El servidor está configurado automáticamente para aceptar requests desde la UR
 - Para producción, considera configurar variables de entorno específicas del entorno
 - Asegúrate de que ambos servicios (cliente y servidor) estén ejecutándose para el funcionamiento completo
 - Las variables de entorno permiten cambiar fácilmente los puertos sin modificar el código
+- Todos los tests están configurados y funcionando correctamente
+- La cobertura de tests incluye componentes, hooks, páginas y flujos completos de la aplicación
 
 
