@@ -1,4 +1,3 @@
-import styles from './EmptyResults.module.scss'
 import { Error } from '../Error'
 import { useLocation, useNavigate } from 'react-router-dom'
 

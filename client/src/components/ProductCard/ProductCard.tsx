@@ -3,7 +3,6 @@ import type { Product } from '../../types/Product'
 import styles from './ProductCard.module.scss'
 import AmountLabel from '../AmountLabel'
 import Badge from '../Badge'
-import Rating from '../Rating'
 import { FREE_SHIPPING_TEXT } from '../../common/constants'
 import { useNavigate, useLocation } from 'react-router-dom'
 
@@ -36,9 +35,9 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       <div className={styles.info}>
         <p className={styles.title}>{product.title}</p>
         <AmountLabel {...product.price} />
-        {product.free_shipping === 'true' && (
+        {product.free_shipping && (
           <Badge variant="primary" color="success" size="medium">
-            {FREE_SHIPPING_TEXT}
+            {product.free_shipping}
           </Badge>
         )}
       </div>
