@@ -1,0 +1,100 @@
+{
+  "categories": [
+        "Tecnologia",
+        "Celulares",
+        "Smartphones"
+  ],
+  "products": [
+    {
+      "id": "MLA1",
+      "title": "Xiaomi POCO Poco X6 Pro 5G Dual SIM 512 GB negro 12 GB RAM",
+      "price": {
+        "currency": "ARS",
+        "amount": 800000,
+        "decimals": 0
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_660762-MLA74048129932_012024-T.webp",
+      "condition": "new",
+      "free_shipping": "Llega gratis mañana",
+      "categories": ["Tecnologia", "Celulares", "Smartphones"]
+    },
+    {
+      "id": "MLA2222",
+      "title": "Xiaomi Poco X7 Pro Dual SIM 5G 512gb Negro 12ram 50mpx",
+      "price": {
+        "currency": "ARS",
+        "amount": 850000,
+        "decimals": 0
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_662793-MLA81920022500_012025-T.webp",
+      "condition": "new",
+      "free_shipping": null,
+      "categories": ["Tecnologia", "Celulares", "Smartphones"]
+    },
+    {
+      "id": "MLA3",
+      "title": "Samsung Galaxy A36 5G 256gb 8gb Awesome Black",
+      "price": {
+        "currency": "ARS",
+        "amount": 699000,
+        "decimals": 0
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_768584-MLA83308468613_032025-T.webp",
+      "condition": "new",
+      "free_shipping": "Llega gratis el jueves",
+      "categories": ["Tecnologia", "Celulares", "Smartphones"]
+    },
+    {
+      "id": "MLA4",
+      "title": "Motorola Edge 50 Fusion 256gb 8gb RAM Negro",
+      "price": {
+        "currency": "ARS",
+        "amount": 629000,
+        "decimals": 0
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_894640-MLA88783676886_082025-T.webp",
+      "condition": "new",
+      "free_shipping": "Llega gratis el Martes",
+      "categories": ["Tecnologia", "Celulares", "Smartphones"]
+    },
+    {
+      "id": "MLA5",
+      "title": "iPhone 13 128GB Midnight",
+      "price": {
+        "currency": "ARS",
+        "amount": 999999,
+        "decimals": 0
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_884725-MLA89081040425_072025-T.webp",
+      "condition": "new",
+      "free_shipping": "Llega gratis mañana",
+      "categories": ["Tecnologia", "Celulares", "Smartphones"]
+    },
+    {
+      "id": "MLA6",
+      "title": "Campera inflable impermeable unisex azul",
+      "price": {
+        "currency": "ARS",
+        "amount": 159999,
+        "decimals": 0
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_843525-MLA69794402865_062023-T.webp",
+      "condition": "new",
+      "free_shipping": "Llega gratis mañana",      
+      "categories": ["Ropa y accesorios", "Abrigo", "Campera"]
+    },
+    {
+      "id": "MLA7",
+      "title": "Campera de cuero sintético negra para hombre",
+      "price": {
+        "currency": "ARS",
+        "amount": 199999,
+        "decimals": 0
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_627663-MLA83990855012_052025-T.webp",
+      "condition": "new",
+      "free_shipping": "Llega gratis el Lunes", 
+      "categories": ["Ropa y accesorios", "Abrigo", "Campera"]
+    }
+  ]
+}

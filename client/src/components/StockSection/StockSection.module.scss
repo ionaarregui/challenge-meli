@@ -1,0 +1,38 @@
+.stockSection {
+  margin-bottom: 24px;
+}
+
+.stockLabel {
+  display: block;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.quantitySection {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.quantity {
+  color: #333;
+  font-size: 14px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.dropdown {
+  font-size: 10px;
+  color: #666;
+}
+
+.available {
+  color: #666;
+  font-size: 12px;
+  font-weight: 400;
+}

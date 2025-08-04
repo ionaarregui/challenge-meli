@@ -1,0 +1,32 @@
+.variantsContainer {
+  margin-top: 1rem;
+}
+
+.variants {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.variantLabel {
+  margin: 0 0 0.5rem 0;
+  font-size: 14px;
+  color: #333;
+
+  strong {
+    font-weight: 600;
+  }
+}
+
+.variantText {
+  min-width: 44px;
+  text-align: center;
+  padding: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2509803922);
+  border-radius: 6px;
+}
+
+.active {
+  border: 2px solid #3483fa;
+}

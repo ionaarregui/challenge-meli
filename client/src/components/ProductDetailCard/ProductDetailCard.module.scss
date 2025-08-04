@@ -1,0 +1,60 @@
+.container {
+  display: flex;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+.productInfo {
+  width: 50%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.image {
+  width: auto;
+  height: auto;
+  max-width: min(100%, 320px);
+  object-fit: contain;
+  margin: 0 1rem;
+  display: block;
+  background: #fff;
+
+  img {
+    border-radius: inherit;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.status {
+  font-size: 0.75rem;
+  color: #0000008c;
+  font-weight: 400;
+}
+
+.title {
+  font-size: 22px;
+  margin: 0;
+  font-weight: 600;
+}
+
+.price {
+  font-size: 36px;
+  font-weight: 300;
+}
+
+.paymentLink {
+  font-size: 0.75rem;
+  color: #3483fa;
+  font-weight: 400;
+}
