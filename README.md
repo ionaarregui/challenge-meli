@@ -49,7 +49,7 @@ cp env.example .env
 
 ### 3. Instalar dependencias
 ```bash
-npm install:all
+npm run install:all
 ```
 
 
@@ -58,7 +58,7 @@ npm install:all
 ### Opción 2: Ejecutar ambos simultáneamente
 
 ```bash
-npm start
+npm run start
 ```
 El cliente se ejecutará en: **http://localhost:3000**
 El servidor se ejecutará en: **http://localhost:8080**
